@@ -1,0 +1,44 @@
+
+{
+  "businessName": "Salma Hayek",
+  "tagline": "Hairdresser",
+  "description": "My experience guarantees high quality services and professional results.",
+  "descriptionAbout": "If you're looking for a painter in Spain, you've come to the right place. My name is Robert De Niro, and I've been working as a painter for 10 years. My extensive experience with all types of paint guarantees high-quality service and professional results. I offer painting quotes from 7:00 AM to 10:00 PM to accommodate your schedule.",
+  "phone": "📞 +34 603 158 604",
+  "whatsApp": "🟢",
+  "email": "📧 inna@example.com",
+  "instagram": "📷 @inna_amigurumik",
+  "location": "Lloret de Mar, Spain",
+  "bodyColor": "#78a5a3",
+  "themeColor": "#ce5a57",
+  "hoverColor": "#e1b16a",
+  "textColor": "#444c5c",
+  "services": [
+    {
+      "name": "Interior wall painting",
+      "price": "120€"
+    },
+    {
+      "name": "Exterior & facade painting",
+      "price": "250€"
+    },
+    {
+      "name": "Decorative finishes",
+      "price": "180€"
+    },
+    {
+      "name": "Wood and metal restoration",
+      "price": "200€"
+    }
+  ],
+  "gallery": [
+    { "src": "./images/about-1.jpg", "alt": "01"},
+    { "src": "./images/about-2.jpg", "alt": "02"},
+    { "src": "./images/about-3.jpg", "alt": "03"},
+    { "src": "./images/about-4.jpg", "alt": "04"},
+    { "src": "./images/about-5.jpg", "alt": "05"},
+    { "src": "./images/about-6.jpg", "alt": "06"},
+    { "src": "./images/about-7.jpg", "alt": "07"},
+    { "src": "./images/about-8.jpg", "alt": "08"}
+  ]
+}
