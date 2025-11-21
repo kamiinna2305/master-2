@@ -1,0 +1,528 @@
+/*
+  Template © 2025 Inna Web Boutique
+  License: for personal use only. Resale prohibited.
+*/
+
+@import url('reset.css');
+
+/* Flex wrapper */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  
+}
+
+/******************************/
+:root {
+  --body-color: #ddd7d2;
+  --theme-color: #d4a785; /* default */
+  --text-color: #333;
+}
+/******************************/
+
+/*Header*/
+
+.header {
+background-color: var(--theme-color);
+box-shadow: 0 0 15px rgba(68, 76, 92, 0.6);
+}
+
+.header_menu{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap; 
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+}
+
+.header_name{
+  text-align: center;
+  padding-left: 30px;
+  font-size: 3rem;
+  font-style: italic;
+  flex-wrap: wrap;
+  color: var(--hover-color);
+}
+
+.menu_items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  font-size: 1.6rem;
+}
+
+.menu_item{
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 4px 0;
+  transition: all 0.8s;
+}
+
+.menu_item:hover{
+  color: var(--hover-color);
+}
+
+
+.header_book{
+  flex-shrink: 0;
+}
+
+.book-now{
+  padding: 12px 24px;
+  border: 1px var(--text-color) solid;
+  border-radius: 25px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--hover-color);
+  transition: all 0.5s ease;
+  box-shadow: 0 0 15px rgba(68, 76, 92, 0.6);
+}
+
+.book-now:hover {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+/*burger*/
+
+.burger{
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-width: 30px;
+  min-height: 18px;
+  position: relative;
+  z-index: 50;
+}
+
+.burger span{
+  height: 3px;
+  width: 100%;
+  border-radius: 3px;
+  transform: scale(1);
+  background-color: var(--text-color);
+}
+
+.burger::before, .burger::after{
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before{
+  top: 0;
+}
+
+.burger::after{
+  bottom: 0;
+}
+
+.burger.active span{
+  transform: scale(0);
+}
+
+.burger.active::before{
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+
+/**************************/
+
+main{
+  padding-inline: 16px;
+}
+
+section{
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+h2{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.none{
+  display: none;
+}
+
+/*Hero*/
+
+.hero{
+  display: flex;
+  gap: 30px;
+}
+
+.hero_image{
+  flex: 0 0 60%;
+  overflow: hidden;
+  border-radius: 100px;
+  border: solid 2px var(--text-color);
+  box-shadow: 0 0 15px rgba(68, 76, 92, 0.6);
+}
+
+.hero_image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slogan{
+  border-radius: 50px;
+  border: solid 2px var(--text-color);
+  padding: 40px;
+  text-align: center;
+  align-self: center;
+  box-shadow: 0 0 15px rgba(68, 76, 92, 0.6);
+}
+
+
+.slogan_title{
+  font-weight: 800;
+  font-size: 3rem;
+  font-style: italic;
+}
+
+.hero_block{
+  display: flex;
+  row-gap: 20px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hero_description{
+  border-radius: 50px;
+  border: solid 2px var(--text-color);
+  text-align: justify;
+  font-size: 1.3rem;
+  font-style: italic;
+  box-shadow: 0 0 15px rgba(68, 76, 92, 0.6);
+  padding: 20px;
+}
+
+.description{
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+/*About*/
+
+.about_block{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+
+.about_image{
+  max-width: 250px;
+ border: solid 1px var(--text-color);
+ border-radius: 30px;
+ box-shadow: 0 0 15px rgba(68, 76, 92, 0.6);
+ transition: transform 0.2s ease;
+}
+
+.about_image img{
+ height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.about_image:hover{
+  transform: scale(1.05);
+}
+
+
+/*Services*/
+
+.services_block{
+  border-radius: 50px;
+  border: solid 2px var(--text-color);
+  box-shadow: 0 0 15px rgba(68, 76, 92, 0.6);
+  padding: 40px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.services {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.service-name {
+  font-weight: bold;
+  transition: color 0.4s;
+}
+
+.service-name:hover{
+color: var(--theme-color)
+}
+
+
+
+.service-price {
+  font-weight: 600;
+  color: var(--theme-color);
+  transition: color 0.4s;
+}
+
+.service-price:hover{
+  color: var(--hover-color);
+}
+
+
+/*Gallery*/
+
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-grid a{
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.gallery-grid img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.gallery-grid img:hover{
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Footer */
+
+footer{
+  background-color: var(--theme-color);
+  padding: 20px;
+  text-align: center;
+}
+
+.contact_block{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.contact_block a{
+  transition: all 0.5s;
+}
+
+.contact_block a:hover{
+  background-color: var(--theme-color);
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+/* Adaptive */
+
+@media(max-width: 1116px){
+
+  .header{
+    margin-bottom: 20px;
+  }
+.menu_items{
+  display: none;
+}
+
+.burger{
+  display: flex;
+  order: 3;
+}
+
+.menu_item:hover::after{
+  width: 0;
+}
+
+.menu_items.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  overflow-y: auto;
+  padding: 50px 40px;
+  background-color: var(--theme-color);
+  opacity: 0.9;
+  animation: burgerAnimation 0.4s;
+}
+
+section{
+  padding: 1rem 1rem;
+}
+
+.hero{
+  flex-direction: column-reverse;
+  margin-bottom: 10px;
+}
+
+.menu_item{
+  flex-direction: column;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.contact_block{
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+}
+
+@media (max-width: 768px) {
+
+.slogan{
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.slogan_title{
+  font-size: 2rem;
+}
+
+.about_description{
+  padding: 1rem;
+}
+
+section{
+  margin-bottom: 0;
+  padding: 0 0;
+}
+  
+.about_block{
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+.services_block{
+  flex-direction: column;
+  width: 100%;
+}
+
+.services_list{
+  width: 80%;
+}
+}
+
+@media (max-width: 640px){
+
+.header_menu{
+  flex-direction: column-reverse;
+  gap: 30px;
+  width: 100%;
+}
+
+.header_name{
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.burger{
+  align-self: flex-end;
+}
+
+.lang-switcher{
+  font-size: 0.8rem;
+}
+
+.header_book{
+  padding: 10px 18px;
+  border-radius: 18px;
+  font-size: 1.2rem;
+}
+}
+
+@media (max-width: 576px) {
+ 
+.header_name{
+  font-size: 2rem;
+}
+}
+
+@media (max-width: 320px){
+   header{
+    padding: 14px;
+  }
+}
+
+
+/*
+  Template © 2025 Inna Web Boutique 
+  Author: Inna Hiliarovska
+  License: Personal use only. Resale prohibited.
+*/
