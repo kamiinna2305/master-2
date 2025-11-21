@@ -277,6 +277,7 @@ h2{
   padding: 40px;
   max-width: 80%;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .services {
@@ -384,9 +385,11 @@ footer{
   display: none;
 }
 
+
 .burger{
   display: flex;
   order: 3;
+  margin-bottom: 30px;
 }
 
 .menu_item:hover::after{
@@ -441,7 +444,6 @@ section{
 @media (max-width: 768px) {
 
 .slogan{
-  font-size: 1.6rem;
   padding: 1rem;
 }
 
@@ -471,33 +473,34 @@ section{
 .services_list{
   width: 80%;
 }
+
+.services_block{
+  padding: 20px;
+  max-width: 90%;
+}
 }
 
 @media (max-width: 640px){
 
 .header_menu{
   flex-direction: column-reverse;
-  gap: 30px;
+  gap: 10px;
   width: 100%;
 }
 
 .header_name{
-  padding-top: 16px;
-  padding-bottom: 16px;
-  font-size: 2rem;
+  padding-top: 16px; 
   position: absolute;
   top: 0;
   left: 0;
+  padding-bottom: 16px;
+  font-size: 2rem;
   font-size: 2.5rem;
   text-align: center;
 }
 
 .burger{
   align-self: flex-end;
-}
-
-.lang-switcher{
-  font-size: 0.8rem;
 }
 
 .header_book{
